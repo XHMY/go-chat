@@ -105,7 +105,7 @@ func (up UserProcess) Login(userName, password string) (err error) {
 	loginMessage.Password = password
 
 	// func Marshal(v interface{}) ([]byte, error)
-	// 先序列话需要传到服务器的数据
+	// 先序列化需要传到服务器的数据
 	data, err := json.Marshal(loginMessage)
 	if err != nil {
 		logger.Error("Some error occurred when parse you data, error: %v\n", err)
